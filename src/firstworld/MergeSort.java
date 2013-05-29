@@ -4,29 +4,21 @@ import java.util.ArrayList;
 
 public class MergeSort {
 	
-	ArrayList sortedlist = new ArrayList<Integer>();
-	public ArrayList<Integer> merge(int []a, int []b , int indexa , int indexb){		
-		if(empty(a))
+	public  ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b){		
+		if(a.isEmpty())
 			return b;
-		if(empty(b))
+		if(b.isEmpty())
 			return a;
-		if(a[0] < b[0]) 
-			return concat (a[0], merge(a,b, ++indexa, indexb));
+		if(a.get(0).intValue() < b.get(0).intValue())
+			return concat (a.remove(0), merge(a,b));
 		else
-			return concat (b[0], merge(a,b,indexa, ++indexb));
+			return concat (b.remove(0), merge(a,b));
 	}
-	private boolean empty (int []array)
+	private ArrayList<Integer> concat(int elem, ArrayList<Integer> list)
 	{
-		if (array.length == 0) 
-				return true;
-		else 
-			return false;
-	}
-	
-	private ArrayList<Integer> concat(int firstElement, int [] list)
-	{
-		sortedlist.add(firstElement);
-		sortedlist.add(list);		
+		ArrayList<Integer>  sortedlist = new ArrayList<Integer>();
+		sortedlist.add(elem);
+		sortedlist.addAll(list)	;
 		return sortedlist;
 	}	
 }
