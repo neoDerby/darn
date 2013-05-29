@@ -14,7 +14,7 @@ public class MergeSort {
 	    	lefthalf.add(a.remove(0));
 	    while (!a.isEmpty())
 	    	righthalf.add(a.remove(0));		    
-		return merge( mergesort(lefthalf), mergesort( righthalf));
+	    return merge( mergesort(lefthalf), mergesort( righthalf));
 	}
 	private  ArrayList<Integer> merge(ArrayList<Integer> a, ArrayList<Integer> b){		
 		if(a.isEmpty())
