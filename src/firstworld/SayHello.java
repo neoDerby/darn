@@ -18,8 +18,8 @@ public class SayHello {
 			
 		//ArrayList<Integer> arl1 = new ArrayList<Integer>(Arrays.asList(0, 3,4, 5, 9));
 		//ArrayList<Integer> arl2 = new ArrayList<Integer>(Arrays.asList(1, 2 ,6, 7, 8));
-		ArrayList<Integer> unsorted = new ArrayList<Integer>(Arrays.asList(10,18, 5, 1));
-		System.out.println( "The unsorted list is :" +  unsorted.toString());
+		//ArrayList<Integer> unsorted = new ArrayList<Integer>(Arrays.asList(10,18, 5, 1));
+		//System.out.println( "The unsorted list is :" +  unsorted.toString());
 		/*
 		System.out.println( "The unsorted sorted list is :" +  unsorted.toString());
 		int mid = (unsorted.size()/2);
@@ -31,8 +31,16 @@ public class SayHello {
 		while (!unsorted.isEmpty())
 			System.out.println(unsorted.remove(0));
 		*/
-		MergeSort ms = new MergeSort();
+		//MergeSort ms = new MergeSort();
 		//System.out.println( "The sorted list is :" +  ms.merge(arl1, arl2).toString());
-		System.out.println( "The sorted list is :" +  ms.mergesort(unsorted).toString());
+		//System.out.println( "The sorted list is :" +  ms.mergesort(unsorted).toString());
+		
+		//AddNums obj = new AddNums();
+		//System.out.println( "Sum is :" + obj.addNumbers(1234567));
+		//obj.listAddedNumbers(12345678);		
+		
+		PthPower pboj = new PthPower();
+		System.out.println( "Value of P is :" +  (long)pboj.findPthPower(1073741824));
+		
 	}		
 }
